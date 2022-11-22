@@ -1,7 +1,5 @@
 # VHDL
 
-## Participantes de este proyecto y sus respectivos roles:
-
 ## Integrantes del equipo
 
 · Fabiana Ricci Benítez - Arquitecto del Sistema.
