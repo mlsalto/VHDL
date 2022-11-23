@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Nov 23 10:18:36 2022
-# Process ID: 18884
-# Current directory: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS/project_1/project_1.runs/impl_1
+# Start of session at: Wed Nov 23 11:24:41 2022
+# Process ID: 11608
+# Current directory: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS/project_1/project_1.runs/impl_1/top.vdi
-# Journal file: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS/project_1/project_1.runs/impl_1\vivado.jou
+# Log file: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.runs/impl_1/top.vdi
+# Journal file: D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.runs/impl_1\vivado.jou
 # Running On: DESKTOP-1IE6CUJ, OS: Windows, CPU Frequency: 2808 MHz, CPU Physical cores: 4, Host memory: 17134 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

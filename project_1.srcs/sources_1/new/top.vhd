@@ -3,20 +3,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity top is
     port(
-        button : in std_logic;
+        button_R : in std_logic;
+        button_G : in std_logic;
+        button_B : in std_logic;
         clk : in std_logic;
         reset : in std_logic;
         digsel : in std_logic_vector(3 downto 0);
-        led_rgb: out std_logic;
+        led_r: out std_logic;
+        led_g: out std_logic;
+        led_b: out std_logic;
         digctrl : OUT std_logic_vector(3 DOWNTO 0)
     );
 end top;
 
 architecture Behavioral of top is
 
-    signal SYNC_IN_OUT : std_logic;
-    signal EDGE_CE : std_logic;
-    signal CODE : std_logic_vector(7 downto 0);
+    signal SYNC_IN_OUT_R : std_logic;
+    signal SYNC_IN_OUT_G : std_logic;
+    signal SYNC_IN_OUT_B : std_logic;
+    signal EDGE_CE_R : std_logic;
+    signal EDGE_CE_G : std_logic;
+    signal EDGE_CE_B : std_logic;
+    signal CODE_R : std_logic_vector(7 downto 0);
+    signal CODE_G : std_logic_vector(7 downto 0);
+    signal CODE_B : std_logic_vector(7 downto 0);
     
     component synchrnzr
     port ( 
@@ -54,33 +64,91 @@ architecture Behavioral of top is
     
  begin
     
-    i0 : synchrnzr   -- sincronizador
+    synch_r : synchrnzr   -- sincronizador
     port map(
          CLK  => clk,
-         ASYNC_IN => button,
-         SYNC_OUT => SYNC_IN_OUT
+         ASYNC_IN => button_R,
+         SYNC_OUT => SYNC_IN_OUT_R
     );
     
-    i1 : edgedtctr    -- detector de flanco
+    synch_g : synchrnzr   -- sincronizador
     port map(
          CLK  => clk,
-         SYNC_IN => SYNC_IN_OUT,
-         EDGE => EDGE_CE
+         ASYNC_IN => button_G,
+         SYNC_OUT => SYNC_IN_OUT_G
     );
     
-    i2 : counter  -- contador de 0 a 255
+    synch_b : synchrnzr   -- sincronizador
+    port map(
+         CLK  => clk,
+         ASYNC_IN => button_B,
+         SYNC_OUT => SYNC_IN_OUT_B
+    );
+    
+    edge_r : edgedtctr    -- detector de flanco
+    port map(
+         CLK  => clk,
+         SYNC_IN => SYNC_IN_OUT_R,
+         EDGE => EDGE_CE_R
+    );
+    
+    edge_g : edgedtctr    -- detector de flanco
+    port map(
+         CLK  => clk,
+         SYNC_IN => SYNC_IN_OUT_G,
+         EDGE => EDGE_CE_G
+    );
+    
+    edge_b : edgedtctr    -- detector de flanco
+    port map(
+         CLK  => clk,
+         SYNC_IN => SYNC_IN_OUT_B,
+         EDGE => EDGE_CE_B
+    );
+    
+    counter_r : counter  -- contador de 0 a 255
     port map(
          clk  => clk,
-         CE => EDGE_CE,
-         code => CODE,
+         CE => EDGE_CE_R,
+         code => CODE_R,
          reset => reset
     );
     
-    i3: pwm -- codigo para un led
+    counter_g : counter  -- contador de 0 a 255
+    port map(
+         clk  => clk,
+         CE => EDGE_CE_G,
+         code => CODE_G,
+         reset => reset
+    );
+    
+    counter_b : counter  -- contador de 0 a 255
+    port map(
+         clk  => clk,
+         CE => EDGE_CE_B,
+         code => CODE_B,
+         reset => reset
+    );
+    
+    pwm_r: pwm -- codigo para un led
        port map(
         clk => CLK ,
-        NUM => CODE,
-        PWM_OUT => led_rgb
+        NUM => CODE_R,
+        PWM_OUT => led_r
+    );
+    
+    pwm_g: pwm -- codigo para un led
+       port map(
+        clk => CLK ,
+        NUM => CODE_G,
+        PWM_OUT => led_g
+    );
+    
+    pwm_b: pwm -- codigo para un led
+       port map(
+        clk => CLK ,
+        NUM => CODE_B,
+        PWM_OUT => led_b
     );
     
     
