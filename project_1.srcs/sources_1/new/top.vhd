@@ -12,6 +12,9 @@ entity top is
         led_r: out std_logic;
         led_g: out std_logic;
         led_b: out std_logic;
+        led_r_c: out std_logic;
+        led_g_c: out std_logic;
+        led_b_c: out std_logic;
         digctrl : OUT std_logic_vector(3 DOWNTO 0)
     );
 end top;
@@ -27,6 +30,9 @@ architecture Behavioral of top is
     signal CODE_R : std_logic_vector(7 downto 0);
     signal CODE_G : std_logic_vector(7 downto 0);
     signal CODE_B : std_logic_vector(7 downto 0);
+    signal CODE_R_C : std_logic_vector(7 downto 0);
+    signal CODE_G_C : std_logic_vector(7 downto 0);
+    signal CODE_B_C : std_logic_vector(7 downto 0);
     
     component synchrnzr
     port ( 
@@ -57,10 +63,22 @@ architecture Behavioral of top is
          clk : in std_logic; --Clock
          CE : in std_logic; --Chip Enable
          code : out std_logic_vector(7 downto 0); --Valor de 0 a 9
+         code_c : out std_logic_vector(7 downto 0); --Valor de 0 a 9
          reset : in std_logic
      );
     end component;
     
+    component complementario is
+    PORT (
+       clk : in std_logic; --Clock
+       led_in_r : in std_logic_vector(7 downto 0);
+	   led_in_g: in std_logic_vector(7 downto 0);
+	   led_in_b: in std_logic_vector(7 downto 0);
+	   led_out_r: out std_logic_vector(7 downto 0);
+	   led_out_g: out std_logic_vector(7 downto 0);
+	   led_out_b: out std_logic_vector(7 downto 0)
+    );
+    end component;
     
  begin
     
@@ -111,6 +129,7 @@ architecture Behavioral of top is
          clk  => clk,
          CE => EDGE_CE_R,
          code => CODE_R,
+         code_c => CODE_R_c,
          reset => reset
     );
     
@@ -119,6 +138,7 @@ architecture Behavioral of top is
          clk  => clk,
          CE => EDGE_CE_G,
          code => CODE_G,
+         code_c => CODE_G_c,
          reset => reset
     );
     
@@ -127,8 +147,10 @@ architecture Behavioral of top is
          clk  => clk,
          CE => EDGE_CE_B,
          code => CODE_B,
+         code_c => CODE_B_C,
          reset => reset
     );
+    
     
     pwm_r: pwm -- codigo para un led
        port map(
@@ -151,6 +173,26 @@ architecture Behavioral of top is
         PWM_OUT => led_b
     );
     
+     pwm_r_c: pwm -- codigo para un led
+       port map(
+        clk => CLK ,
+        NUM => CODE_R_c,
+        PWM_OUT => led_r_c
+    );
+    
+    pwm_g_c: pwm -- codigo para un led
+       port map(
+        clk => CLK ,
+        NUM => CODE_G_c,
+        PWM_OUT => led_g_c
+    );
+    
+    pwm_b_c: pwm -- codigo para un led
+       port map(
+        clk => CLK ,
+        NUM => CODE_B_c,
+        PWM_OUT => led_b_c
+    );
     
     digctrl <= not(digsel);
 

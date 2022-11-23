@@ -22,45 +22,48 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10016
+INFO: [Synth 8-7075] Helper process launched with PID 13084
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.066 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1294.215 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:19]
-INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_r' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'top' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:22]
+INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_r' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:85]
 INFO: [Synth 8-638] synthesizing module 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'synchrnzr' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:12]
-INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_g' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:74]
-INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_b' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:81]
-INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_r' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:88]
+INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_g' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:92]
+INFO: [Synth 8-3491] module 'synchrnzr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'synch_b' of component 'synchrnzr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:99]
+INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_r' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'edgedtctr' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:13]
-INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_g' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:95]
-INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_b' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:102]
-INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_r' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:109]
-INFO: [Synth 8-638] synthesizing module 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:23]
-INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_g' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:117]
-INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_b' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:125]
-INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_r' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:133]
+INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_g' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:113]
+INFO: [Synth 8-3491] module 'edgedtctr' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/edgedtctr.vhd:5' bound to instance 'edge_b' of component 'edgedtctr' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:120]
+INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_r' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:127]
+INFO: [Synth 8-638] synthesizing module 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:24]
+INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_g' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:136]
+INFO: [Synth 8-3491] module 'counter' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/counter.vhd:14' bound to instance 'counter_b' of component 'counter' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:145]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_r' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:155]
 INFO: [Synth 8-638] synthesizing module 'PWM' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:37]
 INFO: [Synth 8-256] done synthesizing module 'PWM' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:37]
-INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_g' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:140]
-INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_b' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:147]
-INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_g' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:162]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_b' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:169]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_r_c' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:176]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_g_c' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:183]
+INFO: [Synth 8-3491] module 'PWM' declared at 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/PWM.vhd:29' bound to instance 'pwm_b_c' of component 'pwm' [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:190]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.srcs/sources_1/new/top.vhd:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.066 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.215 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.066 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.215 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.066 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.215 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1294.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1294.215 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -71,45 +74,45 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1335.473 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1330.695 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1335.473 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    8 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 9     
 +---Registers : 
-	                8 Bit    Registers := 6     
+	                8 Bit    Registers := 12    
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 3     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -127,25 +130,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -163,37 +166,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -226,39 +229,40 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     3|
+|2     |CARRY4 |     6|
 |3     |LUT1   |    10|
-|4     |LUT2   |     6|
-|5     |LUT3   |    12|
-|6     |LUT4   |    36|
-|7     |LUT5   |    15|
-|8     |LUT6   |    15|
+|4     |LUT2   |     9|
+|5     |LUT3   |    19|
+|6     |LUT4   |    73|
+|7     |LUT5   |    36|
+|8     |LUT6   |    27|
 |9     |SRL16E |     3|
-|10    |FDRE   |    60|
-|11    |IBUF   |     9|
-|12    |OBUF   |     7|
+|10    |FDRE   |    84|
+|11    |FDSE   |    24|
+|12    |IBUF   |     9|
+|13    |OBUF   |    10|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1330.695 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1330.695 ; gain = 36.629
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1335.473 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1335.473 ; gain = 41.258
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1330.695 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1335.473 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1330.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1335.473 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 7d7bafa5
+Synth Design complete, checksum: ea86656a
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 1330.695 ; gain = 36.629
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1335.473 ; gain = 41.258
 INFO: [Common 17-1381] The checkpoint 'D:/@UNIVERSIDAD/trabajo_sed/trabajo_LEDS_git/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 11:24:33 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 12:50:54 2022...

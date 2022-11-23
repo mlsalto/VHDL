@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Wed Nov 23 11:25:12 2022
+| Date         : Wed Nov 23 12:51:53 2022
 | Host         : DESKTOP-1IE6CUJ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |     4 |
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
+| Total control sets |    13 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     6 |
+| >= 8 to < 10       |    12 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
@@ -58,28 +58,34 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              12 |            6 |
+| No           | No                    | No                     |              12 |            7 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              24 |            7 |
-| Yes          | No                    | No                     |               0 |            0 |
+| No           | Yes                   | No                     |              48 |           15 |
+| Yes          | No                    | No                     |              24 |            6 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              24 |            8 |
+| Yes          | Yes                   | No                     |              24 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+---------------------------------+------------------+----------------+--------------+
-|  Clock Signal  | Enable Signal |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+---------------+---------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               | pwm_b/counter_PWM[7]_i_1__1_n_0 |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG |               | pwm_g/counter_PWM[7]_i_1__0_n_0 |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG |               | pwm_r/clear                     |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | edge_b/E[0]   | counter_b/count[7]_i_1__1_n_0   |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | edge_r/E[0]   | counter_r/count[7]_i_1_n_0      |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | edge_g/E[0]   | counter_g/count[7]_i_1__0_n_0   |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG |               |                                 |                6 |             15 |         2.50 |
-+----------------+---------------+---------------------------------+------------------+----------------+--------------+
++----------------+----------------------+-----------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |     Enable Signal    |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------+-----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                      | pwm_b/counter_PWM[7]_i_1__1_n_0   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                      | pwm_b_c/counter_PWM[7]_i_1__4_n_0 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG |                      | pwm_g/counter_PWM[7]_i_1__0_n_0   |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG |                      | pwm_g_c/counter_PWM[7]_i_1__3_n_0 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                      | pwm_r/clear                       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                      | pwm_r_c/counter_PWM[7]_i_1__2_n_0 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | edge_g/E[0]          |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | edge_g/sreg_reg[1]_0 | counter_g/count                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | edge_r/sreg_reg[1]_0 | counter_r/count                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | edge_r/E[0]          |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | edge_b/sreg_reg[1]_0 | counter_b/count                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | edge_b/E[0]          |                                   |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG |                      |                                   |                7 |             15 |         2.14 |
++----------------+----------------------+-----------------------------------+------------------+----------------+--------------+
 
 
