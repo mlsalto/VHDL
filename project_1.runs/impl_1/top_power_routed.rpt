@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Wed Nov 23 10:15:36 2022
-| Host             : DESKTOP-1IE6CUJ running 64-bit major release  (build 9200)
+| Date             : Fri Dec  9 19:10:07 2022
+| Host             : LAPTOP-B7P6UCK1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.496        |
+| Total On-Chip Power (W)  | 2.310        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.384        |
-| Device Static (W)        | 0.112        |
+| Dynamic (W)              | 2.204        |
+| Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 69.0         |
-| Junction Temperature (C) | 41.0         |
+| Max Ambient (C)          | 74.5         |
+| Junction Temperature (C) | 35.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.128 |       63 |       --- |             --- |
-|   LUT as Logic          |     0.114 |       23 |     63400 |            0.04 |
-|   Register              |     0.006 |       20 |    126800 |            0.02 |
+| Slice Logic             |     0.591 |      458 |       --- |             --- |
+|   LUT as Logic          |     0.417 |      112 |     63400 |            0.18 |
+|   CARRY4                |     0.082 |       39 |     15850 |            0.25 |
+|   Register              |     0.067 |      210 |    126800 |            0.17 |
+|   F7/F8 Muxes           |     0.015 |       15 |     63400 |            0.02 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   LUT as Shift Register |     0.002 |        1 |     19000 |           <0.01 |
-|   CARRY4                |    <0.001 |        1 |     15850 |           <0.01 |
-|   Others                |     0.000 |        6 |       --- |             --- |
-| Signals                 |     0.127 |       41 |       --- |             --- |
-| I/O                     |     3.128 |       12 |       210 |            5.71 |
-| Static Power            |     0.112 |          |           |                 |
-| Total                   |     3.496 |          |           |                 |
+|   LUT as Shift Register |     0.003 |        6 |     19000 |            0.03 |
+|   Others                |     0.000 |       42 |       --- |             --- |
+| Signals                 |     0.570 |      297 |       --- |             --- |
+| I/O                     |     1.044 |       10 |       210 |            4.76 |
+| Static Power            |     0.106 |          |           |                 |
+| Total                   |     2.310 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.311 |       0.284 |      0.028 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.133 |       0.114 |      0.019 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.882 |       0.878 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.207 |       1.185 |      0.022 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.056 |       0.037 |      0.019 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.293 |       0.289 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -136,14 +137,31 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------+-----------+
-| Name | Power (W) |
-+------+-----------+
-| top  |     3.384 |
-|   i0 |     0.003 |
-|   i1 |     0.014 |
-|   i2 |     0.026 |
-|   i3 |     0.146 |
-+------+-----------+
++----------------------+-----------+
+| Name                 | Power (W) |
++----------------------+-----------+
+| top                  |     2.204 |
+|   Blue               |     0.350 |
+|     boton0_debouncer |     0.079 |
+|     boton0_dtctr     |     0.003 |
+|     boton1_debouncer |     0.067 |
+|     boton1_dtctr     |     0.004 |
+|     ctr              |     0.070 |
+|     pwminstance      |     0.125 |
+|   Green              |     0.390 |
+|     boton0_debouncer |     0.103 |
+|     boton0_dtctr     |     0.003 |
+|     boton1_debouncer |     0.072 |
+|     boton1_dtctr     |     0.005 |
+|     ctr              |     0.069 |
+|     pwminstance      |     0.136 |
+|   Red                |     0.371 |
+|     boton0_debouncer |     0.078 |
+|     boton0_dtctr     |     0.003 |
+|     boton1_debouncer |     0.092 |
+|     boton1_dtctr     |     0.004 |
+|     ctr              |     0.068 |
+|     pwminstance      |     0.125 |
++----------------------+-----------+
 
 

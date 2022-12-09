@@ -31,6 +31,7 @@ port (
    clk: in std_logic; -- 100MHz clock input 
    NUM: in std_logic_vector(7 downto 0); -- numero que te entra del counter (0 a 255 )
    PWM_OUT: out std_logic -- PWM signal out with frequency of 10MHz
+   
   );
 end PWM;
 
@@ -53,4 +54,5 @@ begin
  end process;
  PWM_OUT <= '1' when counter_PWM < DUTY_CYCLE else '0';
 end Behavioral;
+
 
