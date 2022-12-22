@@ -50,7 +50,7 @@ architecture structural of Color is
 
     signal debounced_input: std_logic_vector( 1 downto 0);
     signal SYNC_IN_OUT : std_logic_vector(1 downto 0);
-   -- signal pulse : std_logic_vector(1 downto 0);
+    signal pulse : std_logic;
    
   
     --DECLARACION DE LOS COMPONENTES
@@ -69,12 +69,13 @@ architecture structural of Color is
     );
     end component;
     
- --   component Buttondtctr
- --   port(  
- --        CLK : in std_logic;
- --        SYNC_IN : in std_logic;
-  --       EDGE : out std_logic);
- --   end component;
+    
+    component pulse_generator is
+    port(
+          clk : in std_logic;
+          clk_out : buffer std_logic   
+    );
+    end component; 
     
     component counter 
     port(  
@@ -100,11 +101,11 @@ begin
     boton0_synchrnzr: Synchrnzr port map(clk, debounced_input(0), sync_in_out(0)); 
     boton1_synchrnzr: Synchrnzr port map(clk, debounced_input(1), sync_in_out(1));
     
-    --Instancia del detector de boton
- --  boton0_dtctr: Buttondtctr port map(clk, sync_in_out(0),pulse(0));
- --  boton1_dtctr: Buttondtctr port map(clk, sync_in_out(1),pulse(1));
+    --Instancia del generador de pulso
  
+    pulses: Pulse_generator port map(clk, pulse);
+  
  --Instancia del contador
-    ctr: counter port map (reset, clk, enable, Max_level, sync_in_out(1), sync_in_out(0), color);
+    ctr: counter port map (reset, pulse, enable, Max_level, sync_in_out(1), sync_in_out(0), color);
 
 end structural;

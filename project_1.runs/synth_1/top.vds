@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Dec 22 13:20:43 2022
-# Process ID: 3508
+# Start of session at: Thu Dec 22 19:11:49 2022
+# Process ID: 19812
 # Current directory: C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.runs/synth_1/top.vds
@@ -11,7 +11,7 @@
 # Running On: LAPTOP-B7P6UCK1, OS: Windows, CPU Frequency: 2296 MHz, CPU Physical cores: 8, Host memory: 16844 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.293 ; gain = 0.000
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1271.785 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/utils_1/imports/synth_1/top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,30 +24,29 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3596
+INFO: [Synth 8-7075] Helper process launched with PID 6564
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1269.293 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1271.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/top.vhd:20]
 INFO: [Synth 8-3491] module 'RGB' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd:36' bound to instance 'RGB_MODE' of component 'RGB' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/top.vhd:90]
 INFO: [Synth 8-638] synthesizing module 'RGB' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd:50]
 INFO: [Synth 8-3491] module 'Color' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:36' bound to instance 'Red' of component 'Color' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd:67]
 INFO: [Synth 8-638] synthesizing module 'Color' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:49]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:5' bound to instance 'boton0_debouncer' of component 'debouncer' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:96]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:5' bound to instance 'boton0_debouncer' of component 'debouncer' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:97]
 INFO: [Synth 8-638] synthesizing module 'Debouncer' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'Debouncer' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:11]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:5' bound to instance 'boton1_debouncer' of component 'debouncer' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:97]
-INFO: [Synth 8-3491] module 'synchrnzr' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'boton0_synchrnzr' of component 'Synchrnzr' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:100]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd:5' bound to instance 'boton1_debouncer' of component 'debouncer' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:98]
+INFO: [Synth 8-3491] module 'synchrnzr' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'boton0_synchrnzr' of component 'Synchrnzr' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:101]
 INFO: [Synth 8-638] synthesizing module 'synchrnzr' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'synchrnzr' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:12]
-INFO: [Synth 8-3491] module 'synchrnzr' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'boton1_synchrnzr' of component 'Synchrnzr' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:101]
-INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:35' bound to instance 'ctr' of component 'counter' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:108]
-INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:48]
-WARNING: [Synth 8-614] signal 'C_INC' is read in the process but is not in the sensitivity list [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:66]
-WARNING: [Synth 8-614] signal 'C_DEC' is read in the process but is not in the sensitivity list [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:66]
-WARNING: [Synth 8-614] signal 'COUNT' is read in the process but is not in the sensitivity list [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:66]
-WARNING: [Synth 8-614] signal 'MAX' is read in the process but is not in the sensitivity list [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:66]
-INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:48]
+INFO: [Synth 8-3491] module 'synchrnzr' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd:4' bound to instance 'boton1_synchrnzr' of component 'Synchrnzr' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:102]
+INFO: [Synth 8-3491] module 'pulse_generator' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/pulse_generator.vhd:34' bound to instance 'pulses' of component 'pulse_generator' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'pulse_generator' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/pulse_generator.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'pulse_generator' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/pulse_generator.vhd:41]
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/counter.vhd:35' bound to instance 'ctr' of component 'counter' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/counter.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'counter' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/counter.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'Color' (0#1) [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:49]
 INFO: [Synth 8-3491] module 'Color' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:36' bound to instance 'Blue' of component 'Color' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd:68]
 INFO: [Synth 8-3491] module 'Color' declared at 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd:36' bound to instance 'Green' of component 'Color' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd:69]
@@ -79,18 +78,18 @@ INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/GU502D/Deskto
 WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Convertidor_HSV_RGB.vhd:62]
 WARNING: [Synth 8-7129] Port NUM[8] in module PWM is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.293 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1271.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.293 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1271.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1269.293 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1271.785 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1269.293 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1271.785 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -101,35 +100,34 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1289.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1327.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1289.496 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'COUNT_reg' [C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd:69]
 WARNING: [Synth 8-327] inferring latch for variable 'R_U_reg' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Convertidor_HSV_RGB.vhd:62]
 WARNING: [Synth 8-327] inferring latch for variable 'G_U_reg' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Convertidor_HSV_RGB.vhd:62]
 WARNING: [Synth 8-327] inferring latch for variable 'B_U_reg' [C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Convertidor_HSV_RGB.vhd:62]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -137,6 +135,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   31 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 6     
 	   2 Input    9 Bit       Adders := 17    
 	   3 Input    9 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 7     
@@ -145,9 +144,10 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 12    
 +---Registers : 
+	                9 Bit    Registers := 6     
 	                8 Bit    Registers := 7     
 	                2 Bit    Registers := 12    
-	                1 Bit    Registers := 36    
+	                1 Bit    Registers := 42    
 +---Muxes : 
 	   2 Input   31 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 37    
@@ -155,7 +155,6 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 6     
-	   3 Input    1 Bit        Muxes := 6     
 	   6 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -178,30 +177,25 @@ WARNING: [Synth 8-3332] Sequential element (HSV_TO_RGB/R_U_reg[8]) is unused and
 WARNING: [Synth 8-3332] Sequential element (HSV_TO_RGB/G_U_reg[8]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (HSV_TO_RGB/B_U_reg[8]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (RGB_MODE/Red/ctr/COUNT_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (RGB_MODE/Blue/ctr/COUNT_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (RGB_MODE/Green/ctr/COUNT_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (HSV_MODE/Saturation/ctr/COUNT_reg[8]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (HSV_MODE/Value/ctr/COUNT_reg[8]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1289.496 ; gain = 17.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -219,37 +213,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -291,44 +285,43 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   177|
-|3     |LUT1   |    49|
-|4     |LUT2   |   208|
-|5     |LUT3   |    74|
-|6     |LUT4   |   149|
-|7     |LUT5   |   174|
-|8     |LUT6   |   263|
+|2     |CARRY4 |   199|
+|3     |LUT1   |    54|
+|4     |LUT2   |   130|
+|5     |LUT3   |    79|
+|6     |LUT4   |   128|
+|7     |LUT5   |   123|
+|8     |LUT6   |   204|
 |9     |MUXF7  |     1|
 |10    |SRL16E |    12|
-|11    |FDRE   |   526|
-|12    |LD     |    24|
-|13    |LDC    |    49|
+|11    |FDCE   |    49|
+|12    |FDRE   |   508|
+|13    |LD     |    24|
 |14    |IBUF   |    11|
 |15    |OBUF   |     6|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1327.043 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1327.043 ; gain = 57.750
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:54 . Memory (MB): peak = 1293.793 ; gain = 4.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1293.793 ; gain = 22.008
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1327.043 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 251 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1305.859 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1310.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 73 instances were transformed.
+  A total of 24 instances were transformed.
   LD => LDCE: 24 instances
-  LDC => LDCE: 49 instances
 
-Synth Design complete, checksum: 4c0b92a7
+Synth Design complete, checksum: f1bcb1a0
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+65 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1327.043 ; gain = 57.750
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1310.500 ; gain = 38.715
 INFO: [Common 17-1381] The checkpoint 'C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 22 13:21:59 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 22 19:13:06 2022...

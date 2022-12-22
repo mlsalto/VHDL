@@ -93,8 +93,9 @@ read_vhdl -library xil_defaultlib {
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/PARTY.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/PWM.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd
-  C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/counter.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/pulse_generator.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/top.vhd
 }

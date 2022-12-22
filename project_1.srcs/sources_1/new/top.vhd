@@ -112,11 +112,11 @@ PWM_IN_MAT <= RGB_MODE_MAT WHEN (switches_mode(2) = '1' and switches_mode(1) = '
 
 
 
-PWM_IN_COMP_MAT(2) <= std_logic_vector(64 - unsigned(PWM_IN_MAT(2))) WHEN switches_mode(3)='1' else 
+PWM_IN_COMP_MAT(2) <= std_logic_vector(255 - unsigned(PWM_IN_MAT(2))) WHEN switches_mode(3)='1' else 
     (others => '0' );
-PWM_IN_COMP_MAT(1) <= std_logic_vector(64 - unsigned(PWM_IN_MAT(1))) WHEN switches_mode(3)='1' else 
+PWM_IN_COMP_MAT(1) <= std_logic_vector(255 - unsigned(PWM_IN_MAT(1))) WHEN switches_mode(3)='1' else 
     (others => '0' );
-PWM_IN_COMP_MAT(0) <= std_logic_vector(64 - unsigned(PWM_IN_MAT(0))) WHEN switches_mode(3)='1' else 
+PWM_IN_COMP_MAT(0) <= std_logic_vector(255 - unsigned(PWM_IN_MAT(0))) WHEN switches_mode(3)='1' else 
     (others => '0' ); 
 
 PWM_R_COMPLEMENTARY: PWM port map (clk, PWM_IN_COMP_MAT(2), led_rgb_comp(2));

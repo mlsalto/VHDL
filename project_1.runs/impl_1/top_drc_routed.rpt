@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Thu Dec 22 13:23:49 2022
+| Date         : Thu Dec 22 19:15:40 2022
 | Host         : LAPTOP-B7P6UCK1 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 8
+             Violations found: 2
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 7          |
+| PDRC-153 | Warning  | Gated clock check                                   | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,37 +49,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net HSV_MODE/Hue/ctr/COUNT is a gated clock net sourced by a combinational pin HSV_MODE/Hue/ctr/COUNT_reg[8]_i_2/O, cell HSV_MODE/Hue/ctr/COUNT_reg[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#2 Warning
-Gated clock check  
 Net HSV_MODE/Hue/ctr/E[0] is a gated clock net sourced by a combinational pin HSV_MODE/Hue/ctr/R_U_reg[7]_i_2/O, cell HSV_MODE/Hue/ctr/R_U_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net HSV_MODE/Saturation/ctr/COUNT is a gated clock net sourced by a combinational pin HSV_MODE/Saturation/ctr/COUNT_reg[7]_i_2__2/O, cell HSV_MODE/Saturation/ctr/COUNT_reg[7]_i_2__2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net HSV_MODE/Value/ctr/COUNT is a gated clock net sourced by a combinational pin HSV_MODE/Value/ctr/COUNT_reg[7]_i_2__3/O, cell HSV_MODE/Value/ctr/COUNT_reg[7]_i_2__3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net RGB_MODE/Blue/ctr/COUNT is a gated clock net sourced by a combinational pin RGB_MODE/Blue/ctr/COUNT_reg[7]_i_2__0/O, cell RGB_MODE/Blue/ctr/COUNT_reg[7]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net RGB_MODE/Green/ctr/COUNT is a gated clock net sourced by a combinational pin RGB_MODE/Green/ctr/COUNT_reg[7]_i_2__1/O, cell RGB_MODE/Green/ctr/COUNT_reg[7]_i_2__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net RGB_MODE/Red/ctr/COUNT is a gated clock net sourced by a combinational pin RGB_MODE/Red/ctr/COUNT_reg[7]_i_2/O, cell RGB_MODE/Red/ctr/COUNT_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
