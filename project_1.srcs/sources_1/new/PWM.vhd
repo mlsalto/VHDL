@@ -29,7 +29,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity PWM is
 port (
    clk: in std_logic; -- 100MHz clock input 
-   NUM: in std_logic_vector(7 downto 0); -- numero que te entra del counter (0 a 255 )
+   NUM: in std_logic_vector(8 downto 0); -- numero que te entra del counter (0 a 255 )
    PWM_OUT: out std_logic -- PWM signal out with frequency of 10MHz
    
   );
@@ -38,7 +38,7 @@ end PWM;
 architecture Behavioral of PWM is
 
 signal counter_PWM: std_logic_vector(7 downto 0):=(others => '0');-- counter for PWM signal
-signal DUTY_CYCLE: std_logic_vector(7 downto 0):= NUM ;
+signal DUTY_CYCLE: std_logic_vector(8 downto 0):= '0' & NUM(7 downto 0) ;
 
 begin
 

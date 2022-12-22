@@ -87,9 +87,12 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Buttondtctr.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Color.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/Convertidor_HSV_RGB.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/HSV.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/PARTY.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/PWM.vhd
+  C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/RGB.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/practica2/practica2.srcs/sources_1/new/counter.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/debouncer.vhd
   C:/Users/GU502D/Desktop/UPM/S.E.D/TRABAJO_VHDL/project_1.srcs/sources_1/new/sychrnzr.vhd

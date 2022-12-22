@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -32,13 +34,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Color is
+generic (max_width : natural := 9);
 port(
         reset : in std_logic;
         clk : in std_logic;
         button : in std_logic_vector(1 downto 0); --2 botones por color, 1 lo sube y 0 lo baja
         enable: in std_logic;
-        color: out std_logic --Salida de la intensidad del color
-        
+        Max_level: in std_logic_vector(max_width - 1 downto 0);
+        color: out std_logic_vector (max_width - 1 downto 0) --Salida de la intensidad del color 
+       
         );
 end Color;
 
@@ -46,8 +50,8 @@ architecture structural of Color is
 
     signal debounced_input: std_logic_vector( 1 downto 0);
     signal SYNC_IN_OUT : std_logic_vector(1 downto 0);
-    signal pulse : std_logic_vector(1 downto 0);
-    signal Level_input : std_logic_vector(7 downto 0);
+   -- signal pulse : std_logic_vector(1 downto 0);
+   
   
     --DECLARACION DE LOS COMPONENTES
     
@@ -59,37 +63,33 @@ architecture structural of Color is
     
     component Synchrnzr
     port ( 
-          CLK : in std_logic;
-          ASYNC_IN : in std_logic;
-          SYNC_OUT : out std_logic
+         CLK : in std_logic;
+         ASYNC_IN : in std_logic;
+         SYNC_OUT : out std_logic
     );
     end component;
     
-    component Buttondtctr
-    port(  
-         CLK : in std_logic;
-         SYNC_IN : in std_logic;
-         EDGE : out std_logic);
-    end component;
+ --   component Buttondtctr
+ --   port(  
+ --        CLK : in std_logic;
+ --        SYNC_IN : in std_logic;
+  --       EDGE : out std_logic);
+ --   end component;
     
     component counter 
     port(  
         reset    : in std_logic;
 		clk      : in std_logic;
 		enable   : in std_logic;
+		MAX      : in std_logic_vector(max_width - 1 downto 0);
 		C_INC    : in std_logic;
 		C_DEC    : in std_logic;
-		duty_cycle     : out std_logic_vector(7 downto 0));
+		Color_level     : out std_logic_vector(max_width - 1 downto 0)
+		);
     end component;
-		
-    component PWM 
-        port(
-             clk: in std_logic; -- 100MHz clock input 
-             NUM: in std_logic_vector(7 downto 0); -- numero que le entra
-             PWM_OUT: out std_logic -- PWM signal out with frequency of 10MHz
-        );
-    end component;
+		   
     
+ 
 begin
  
     --Instancias de los debouncer de cada boton.
@@ -101,14 +101,10 @@ begin
     boton1_synchrnzr: Synchrnzr port map(clk, debounced_input(1), sync_in_out(1));
     
     --Instancia del detector de boton
-   boton0_dtctr: Buttondtctr port map(clk, sync_in_out(0),pulse(0));
-   boton1_dtctr: Buttondtctr port map(clk, sync_in_out(1),pulse(1));
+ --  boton0_dtctr: Buttondtctr port map(clk, sync_in_out(0),pulse(0));
+ --  boton1_dtctr: Buttondtctr port map(clk, sync_in_out(1),pulse(1));
  
  --Instancia del contador
-    ctr: counter port map (reset, clk, enable, pulse(1), pulse(0), level_input);
-    
-    --Instancia del PWM
-    pwminstance: PWM port map(clk, level_input, color);
-
+    ctr: counter port map (reset, clk, enable, Max_level, sync_in_out(1), sync_in_out(0), color);
 
 end structural;

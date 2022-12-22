@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Dec  9 19:10:08 2022
+| Date         : Thu Dec 22 13:23:51 2022
 | Host         : LAPTOP-B7P6UCK1 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -39,9 +39,11 @@ Timing Summary Report
 | ------------------
 ------------------------------------------------------------------------------------------------
 
-Rule       Severity          Description                  Violations  
----------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  216         
+Rule       Severity          Description                     Violations  
+---------  ----------------  ------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell     538         
+TIMING-20  Warning           Non-clocked latch               73          
+LATCH-1    Advisory          Existing latches in the design  1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -51,22 +53,370 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (216)
+1. checking no_clock (2201)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (558)
-5. checking no_input_delay (6)
-6. checking no_output_delay (3)
+4. checking unconstrained_internal_endpoints (1279)
+5. checking no_input_delay (3)
+6. checking no_output_delay (6)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
-12. checking latch_loops (0)
+12. checking latch_loops (49)
 
-1. checking no_clock (216)
---------------------------
- There are 216 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+1. checking no_clock (2201)
+---------------------------
+ There are 538 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: switches_colors[0] (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: switches_colors[1] (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: switches_colors[2] (HIGH)
+
+ There are 49 register/latch pins with no clock driven by root clock pin: switches_mode[0] (HIGH)
+
+ There are 49 register/latch pins with no clock driven by root clock pin: switches_mode[1] (HIGH)
+
+ There are 49 register/latch pins with no clock driven by root clock pin: switches_mode[2] (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[3]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[4]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[5]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[6]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[7]/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/COUNT_reg[8]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: HSV_MODE/Hue/ctr/aux_count_reg[9]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Saturation/ctr/aux_count_reg[9]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: HSV_MODE/Value/ctr/aux_count_reg[9]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Blue/ctr/aux_count_reg[9]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Green/ctr/aux_count_reg[9]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/boton0_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/boton1_synchrnzr/SYNC_OUT_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[0]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[10]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[11]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[12]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[13]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[14]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[15]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[16]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[17]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[18]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[19]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[1]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[20]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[21]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[22]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[23]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[24]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[3]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[4]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[5]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[6]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[7]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[8]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: RGB_MODE/Red/ctr/aux_count_reg[9]/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -79,23 +429,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (558)
---------------------------------------------------
- There are 558 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (1279)
+---------------------------------------------------
+ There are 1279 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (6)
+5. checking no_input_delay (3)
 ------------------------------
- There are 6 input ports with no input delay specified. (HIGH)
+ There are 3 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (3)
+6. checking no_output_delay (6)
 -------------------------------
- There are 3 ports with no output delay specified. (HIGH)
+ There are 6 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -127,9 +477,9 @@ Table of Contents
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops (0)
-----------------------------
- There are 0 combinational latch loops in the design through latch input
+12. checking latch_loops (49)
+-----------------------------
+ There are 49 combinational latch loops in the design through latch input (HIGH)
 
 
 
@@ -140,7 +490,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                  561          inf        0.000                      0                  561           NA           NA                      NA                    NA  
+        inf        0.000                      0                 1285          inf        0.000                      0                 1285           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -209,226 +559,991 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay           561 Endpoints
-Min Delay           561 Endpoints
+Max Delay          1285 Endpoints
+Min Delay          1285 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 Green/pwminstance/counter_PWM_reg[1]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            led_rgb[0]
-                            (output port)
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/R_U_reg[7]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.302ns  (logic 4.825ns (58.114%)  route 3.478ns (41.886%))
-  Logic Levels:           4  (CARRY4=1 FDRE=1 LUT4=1 OBUF=1)
+  Data Path Delay:        31.497ns  (logic 10.386ns (32.974%)  route 21.111ns (67.026%))
+  Logic Levels:           36  (CARRY4=14 LDCE=1 LUT2=5 LUT3=4 LUT4=4 LUT5=3 LUT6=5)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y92          FDRE                         0.000     0.000 r  Green/pwminstance/counter_PWM_reg[1]/C
-    SLICE_X2Y92          FDRE (Prop_fdre_C_Q)         0.478     0.478 r  Green/pwminstance/counter_PWM_reg[1]/Q
-                         net (fo=8, routed)           1.055     1.533    Green/ctr/ltOp_carry[1]
-    SLICE_X4Y93          LUT4 (Prop_lut4_I1_O)        0.295     1.828 r  Green/ctr/ltOp_carry_i_8/O
-                         net (fo=1, routed)           0.000     1.828    Green/pwminstance/S[0]
-    SLICE_X4Y93          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532     2.360 r  Green/pwminstance/ltOp_carry/CO[3]
-                         net (fo=1, routed)           2.422     4.783    led_rgb_OBUF[0]
-    M16                  OBUF (Prop_obuf_I_O)         3.520     8.302 r  led_rgb_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     8.302    led_rgb[0]
-    M16                                                               r  led_rgb[0] (OUT)
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.466    22.707    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X10Y114        LUT2 (Prop_lut2_I1_O)        0.303    23.010 r  HSV_TO_RGB/i___36_carry_i_1/O
+                         net (fo=2, routed)           1.099    24.108    HSV_TO_RGB/i___36_carry_i_1_n_0
+    SLICE_X9Y114         LUT4 (Prop_lut4_I0_O)        0.124    24.232 r  HSV_TO_RGB/i___36_carry_i_5/O
+                         net (fo=1, routed)           0.000    24.232    HSV_TO_RGB/i___36_carry_i_5_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    24.584 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[3]
+                         net (fo=6, routed)           1.079    25.663    HSV_TO_RGB/multOp0[7]
+    SLICE_X6Y113         LUT6 (Prop_lut6_I5_O)        0.306    25.969 r  HSV_TO_RGB/L_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    25.969    HSV_TO_RGB/L_carry__0_i_4_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    26.224 r  HSV_TO_RGB/L_carry__0/O[3]
+                         net (fo=1, routed)           0.737    26.961    HSV_TO_RGB/L_carry__0_n_4
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.307    27.268 r  HSV_TO_RGB/i__carry__0_i_1/O
+                         net (fo=1, routed)           0.000    27.268    HSV_TO_RGB/i__carry__0_i_1_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    27.516 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[3]
+                         net (fo=1, routed)           0.979    28.495    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_4
+    SLICE_X6Y115         LUT2 (Prop_lut2_I1_O)        0.306    28.801 r  HSV_TO_RGB/i__carry__0_i_1__0/O
+                         net (fo=1, routed)           0.000    28.801    HSV_TO_RGB/i__carry__0_i_1__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    29.056 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[3]
+                         net (fo=4, routed)           0.836    29.892    HSV_MODE/Hue/ctr/data1[7]
+    SLICE_X7Y116         LUT4 (Prop_lut4_I1_O)        0.307    30.199 r  HSV_MODE/Hue/ctr/R_U_reg[7]_i_8/O
+                         net (fo=1, routed)           0.795    30.994    HSV_MODE/Hue/ctr/R_U_reg[7]_i_8_n_0
+    SLICE_X6Y116         LUT6 (Prop_lut6_I5_O)        0.124    31.118 r  HSV_MODE/Hue/ctr/R_U_reg[7]_i_1/O
+                         net (fo=1, routed)           0.379    31.497    HSV_TO_RGB/D[7]
+    SLICE_X6Y116         LDCE                                         r  HSV_TO_RGB/R_U_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Blue/pwminstance/counter_PWM_reg[3]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            led_rgb[1]
-                            (output port)
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/G_U_reg[7]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.916ns  (logic 4.696ns (59.328%)  route 3.220ns (40.672%))
-  Logic Levels:           4  (CARRY4=1 FDRE=1 LUT4=1 OBUF=1)
+  Data Path Delay:        31.070ns  (logic 10.386ns (33.427%)  route 20.684ns (66.573%))
+  Logic Levels:           36  (CARRY4=14 LDCE=1 LUT2=5 LUT3=5 LUT4=3 LUT5=4 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y95          FDRE                         0.000     0.000 r  Blue/pwminstance/counter_PWM_reg[3]/C
-    SLICE_X5Y95          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Blue/pwminstance/counter_PWM_reg[3]/Q
-                         net (fo=6, routed)           1.036     1.492    Blue/ctr/ltOp_carry[3]
-    SLICE_X4Y94          LUT4 (Prop_lut4_I1_O)        0.124     1.616 r  Blue/ctr/ltOp_carry_i_7__0/O
-                         net (fo=1, routed)           0.000     1.616    Blue/pwminstance/S[1]
-    SLICE_X4Y94          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     2.166 r  Blue/pwminstance/ltOp_carry/CO[3]
-                         net (fo=1, routed)           2.184     4.350    led_rgb_OBUF[1]
-    R12                  OBUF (Prop_obuf_I_O)         3.566     7.916 r  led_rgb_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     7.916    led_rgb[1]
-    R12                                                               r  led_rgb[1] (OUT)
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.466    22.707    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X10Y114        LUT2 (Prop_lut2_I1_O)        0.303    23.010 r  HSV_TO_RGB/i___36_carry_i_1/O
+                         net (fo=2, routed)           1.099    24.108    HSV_TO_RGB/i___36_carry_i_1_n_0
+    SLICE_X9Y114         LUT4 (Prop_lut4_I0_O)        0.124    24.232 r  HSV_TO_RGB/i___36_carry_i_5/O
+                         net (fo=1, routed)           0.000    24.232    HSV_TO_RGB/i___36_carry_i_5_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    24.584 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[3]
+                         net (fo=6, routed)           1.079    25.663    HSV_TO_RGB/multOp0[7]
+    SLICE_X6Y113         LUT6 (Prop_lut6_I5_O)        0.306    25.969 r  HSV_TO_RGB/L_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    25.969    HSV_TO_RGB/L_carry__0_i_4_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    26.224 r  HSV_TO_RGB/L_carry__0/O[3]
+                         net (fo=1, routed)           0.737    26.961    HSV_TO_RGB/L_carry__0_n_4
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.307    27.268 r  HSV_TO_RGB/i__carry__0_i_1/O
+                         net (fo=1, routed)           0.000    27.268    HSV_TO_RGB/i__carry__0_i_1_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    27.516 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[3]
+                         net (fo=1, routed)           0.979    28.495    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_4
+    SLICE_X6Y115         LUT2 (Prop_lut2_I1_O)        0.306    28.801 r  HSV_TO_RGB/i__carry__0_i_1__0/O
+                         net (fo=1, routed)           0.000    28.801    HSV_TO_RGB/i__carry__0_i_1__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    29.056 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[3]
+                         net (fo=4, routed)           0.329    29.385    HSV_MODE/Hue/ctr/data1[7]
+    SLICE_X7Y116         LUT5 (Prop_lut5_I1_O)        0.307    29.692 r  HSV_MODE/Hue/ctr/G_U_reg[7]_i_3/O
+                         net (fo=1, routed)           0.433    30.125    HSV_MODE/Hue/ctr/G_U_reg[7]_i_3_n_0
+    SLICE_X7Y116         LUT3 (Prop_lut3_I2_O)        0.124    30.249 r  HSV_MODE/Hue/ctr/G_U_reg[7]_i_1/O
+                         net (fo=1, routed)           0.821    31.070    HSV_TO_RGB/ltOp_carry_i_9__0_0[7]
+    SLICE_X6Y115         LDCE                                         r  HSV_TO_RGB/G_U_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Red/ctr/COUNT_reg[3]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            led_rgb[2]
-                            (output port)
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/B_U_reg[7]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.883ns  (logic 4.708ns (59.726%)  route 3.175ns (40.274%))
-  Logic Levels:           4  (CARRY4=1 FDCE=1 LUT4=1 OBUF=1)
+  Data Path Delay:        30.460ns  (logic 10.262ns (33.690%)  route 20.198ns (66.310%))
+  Logic Levels:           35  (CARRY4=14 LDCE=1 LUT2=5 LUT3=4 LUT4=3 LUT5=3 LUT6=5)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y84          FDCE                         0.000     0.000 r  Red/ctr/COUNT_reg[3]/C
-    SLICE_X2Y84          FDCE (Prop_fdce_C_Q)         0.518     0.518 r  Red/ctr/COUNT_reg[3]/Q
-                         net (fo=8, routed)           0.965     1.483    Red/ctr/Q[3]
-    SLICE_X4Y85          LUT4 (Prop_lut4_I0_O)        0.124     1.607 r  Red/ctr/ltOp_carry_i_7__1/O
-                         net (fo=1, routed)           0.000     1.607    Red/pwminstance/S[1]
-    SLICE_X4Y85          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     2.157 r  Red/pwminstance/ltOp_carry/CO[3]
-                         net (fo=1, routed)           2.210     4.367    led_rgb_OBUF[2]
-    N15                  OBUF (Prop_obuf_I_O)         3.516     7.883 r  led_rgb_OBUF[2]_inst/O
-                         net (fo=0)                   0.000     7.883    led_rgb[2]
-    N15                                                               r  led_rgb[2] (OUT)
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.466    22.707    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X10Y114        LUT2 (Prop_lut2_I1_O)        0.303    23.010 r  HSV_TO_RGB/i___36_carry_i_1/O
+                         net (fo=2, routed)           1.099    24.108    HSV_TO_RGB/i___36_carry_i_1_n_0
+    SLICE_X9Y114         LUT4 (Prop_lut4_I0_O)        0.124    24.232 r  HSV_TO_RGB/i___36_carry_i_5/O
+                         net (fo=1, routed)           0.000    24.232    HSV_TO_RGB/i___36_carry_i_5_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352    24.584 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[3]
+                         net (fo=6, routed)           1.079    25.663    HSV_TO_RGB/multOp0[7]
+    SLICE_X6Y113         LUT6 (Prop_lut6_I5_O)        0.306    25.969 r  HSV_TO_RGB/L_carry__0_i_4/O
+                         net (fo=1, routed)           0.000    25.969    HSV_TO_RGB/L_carry__0_i_4_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    26.224 r  HSV_TO_RGB/L_carry__0/O[3]
+                         net (fo=1, routed)           0.737    26.961    HSV_TO_RGB/L_carry__0_n_4
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.307    27.268 r  HSV_TO_RGB/i__carry__0_i_1/O
+                         net (fo=1, routed)           0.000    27.268    HSV_TO_RGB/i__carry__0_i_1_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.248    27.516 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[3]
+                         net (fo=1, routed)           0.979    28.495    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_4
+    SLICE_X6Y115         LUT2 (Prop_lut2_I1_O)        0.306    28.801 r  HSV_TO_RGB/i__carry__0_i_1__0/O
+                         net (fo=1, routed)           0.000    28.801    HSV_TO_RGB/i__carry__0_i_1__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.255    29.056 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[3]
+                         net (fo=4, routed)           0.304    29.360    HSV_MODE/Hue/ctr/data1[7]
+    SLICE_X5Y115         LUT6 (Prop_lut6_I2_O)        0.307    29.667 r  HSV_MODE/Hue/ctr/B_U_reg[7]_i_1/O
+                         net (fo=1, routed)           0.793    30.460    HSV_TO_RGB/ltOp_carry_i_9_0[7]
+    SLICE_X4Y112         LDCE                                         r  HSV_TO_RGB/B_U_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[1]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/G_U_reg[6]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.094ns  (logic 1.631ns (26.764%)  route 4.463ns (73.236%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        30.017ns  (logic 10.277ns (34.237%)  route 19.740ns (65.763%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.800     6.094    Red/ctr/COUNT_reg[0]_1
-    SLICE_X4Y84          FDCE                                         f  Red/ctr/COUNT_reg[1]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578    28.344 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[2]
+                         net (fo=3, routed)           0.836    29.181    HSV_MODE/Hue/ctr/data1[6]
+    SLICE_X7Y115         LUT6 (Prop_lut6_I4_O)        0.301    29.482 r  HSV_MODE/Hue/ctr/G_U_reg[6]_i_1/O
+                         net (fo=1, routed)           0.536    30.017    HSV_TO_RGB/ltOp_carry_i_9__0_0[6]
+    SLICE_X4Y115         LDCE                                         r  HSV_TO_RGB/G_U_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[7]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/B_U_reg[6]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.094ns  (logic 1.631ns (26.764%)  route 4.463ns (73.236%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.939ns  (logic 10.277ns (34.326%)  route 19.662ns (65.674%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.800     6.094    Red/ctr/COUNT_reg[0]_1
-    SLICE_X4Y84          FDCE                                         f  Red/ctr/COUNT_reg[7]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578    28.344 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[2]
+                         net (fo=3, routed)           0.970    29.315    HSV_MODE/Hue/ctr/data1[6]
+    SLICE_X7Y112         LUT6 (Prop_lut6_I2_O)        0.301    29.616 r  HSV_MODE/Hue/ctr/B_U_reg[6]_i_1/O
+                         net (fo=1, routed)           0.323    29.939    HSV_TO_RGB/ltOp_carry_i_9_0[6]
+    SLICE_X4Y112         LDCE                                         r  HSV_TO_RGB/B_U_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[0]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/B_U_reg[5]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.090ns  (logic 1.631ns (26.783%)  route 4.459ns (73.217%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.750ns  (logic 9.934ns (33.392%)  route 19.816ns (66.608%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.796     6.090    Red/ctr/COUNT_reg[0]_1
-    SLICE_X5Y84          FDCE                                         f  Red/ctr/COUNT_reg[0]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    27.996 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[1]
+                         net (fo=3, routed)           0.808    28.805    HSV_MODE/Hue/ctr/data1[5]
+    SLICE_X7Y112         LUT6 (Prop_lut6_I2_O)        0.306    29.111 r  HSV_MODE/Hue/ctr/B_U_reg[5]_i_1/O
+                         net (fo=1, routed)           0.639    29.750    HSV_TO_RGB/ltOp_carry_i_9_0[5]
+    SLICE_X4Y112         LDCE                                         r  HSV_TO_RGB/B_U_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[5]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/R_U_reg[6]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.090ns  (logic 1.631ns (26.783%)  route 4.459ns (73.217%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.409ns  (logic 10.277ns (34.945%)  route 19.132ns (65.055%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.796     6.090    Red/ctr/COUNT_reg[0]_1
-    SLICE_X5Y84          FDCE                                         f  Red/ctr/COUNT_reg[5]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578    28.344 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[2]
+                         net (fo=3, routed)           0.432    28.777    HSV_MODE/Hue/ctr/data1[6]
+    SLICE_X7Y115         LUT6 (Prop_lut6_I2_O)        0.301    29.078 r  HSV_MODE/Hue/ctr/R_U_reg[6]_i_1/O
+                         net (fo=1, routed)           0.331    29.409    HSV_TO_RGB/D[6]
+    SLICE_X7Y114         LDCE                                         r  HSV_TO_RGB/R_U_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[3]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/B_U_reg[4]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.782ns  (logic 1.631ns (28.209%)  route 4.151ns (71.791%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.355ns  (logic 9.807ns (33.408%)  route 19.548ns (66.592%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=3 LUT5=3 LUT6=5)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.488     5.782    Red/ctr/COUNT_reg[0]_1
-    SLICE_X2Y84          FDCE                                         f  Red/ctr/COUNT_reg[3]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    22.064 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[0]
+                         net (fo=3, routed)           0.310    22.374    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_7
+    SLICE_X9Y114         LUT4 (Prop_lut4_I2_O)        0.299    22.673 r  HSV_TO_RGB/i___36_carry_i_7/O
+                         net (fo=1, routed)           0.000    22.673    HSV_TO_RGB/i___36_carry_i_7_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    22.920 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[0]
+                         net (fo=8, routed)           0.877    23.796    HSV_TO_RGB/multOp0[4]
+    SLICE_X6Y113         LUT6 (Prop_lut6_I1_O)        0.299    24.095 r  HSV_TO_RGB/L_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    24.095    HSV_TO_RGB/L_carry__0_i_7_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.252    24.347 r  HSV_TO_RGB/L_carry__0/O[0]
+                         net (fo=1, routed)           0.977    25.324    HSV_TO_RGB/L_carry__0_n_7
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.295    25.619 r  HSV_TO_RGB/i__carry__0_i_4/O
+                         net (fo=1, routed)           0.000    25.619    HSV_TO_RGB/i__carry__0_i_4_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    25.866 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[0]
+                         net (fo=2, routed)           0.963    26.829    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_7
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.299    27.128 r  HSV_TO_RGB/i__carry__0_i_4__0/O
+                         net (fo=1, routed)           0.000    27.128    HSV_TO_RGB/i__carry__0_i_4__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.252    27.380 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[0]
+                         net (fo=3, routed)           1.129    28.509    HSV_MODE/Hue/ctr/data1[4]
+    SLICE_X5Y113         LUT6 (Prop_lut6_I2_O)        0.295    28.804 r  HSV_MODE/Hue/ctr/B_U_reg[4]_i_1/O
+                         net (fo=1, routed)           0.551    29.355    HSV_TO_RGB/ltOp_carry_i_9_0[4]
+    SLICE_X3Y113         LDCE                                         r  HSV_TO_RGB/B_U_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[4]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/R_U_reg[5]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.782ns  (logic 1.631ns (28.209%)  route 4.151ns (71.791%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.218ns  (logic 9.934ns (33.999%)  route 19.284ns (66.001%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.488     5.782    Red/ctr/COUNT_reg[0]_1
-    SLICE_X3Y84          FDCE                                         f  Red/ctr/COUNT_reg[4]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    27.996 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[1]
+                         net (fo=3, routed)           0.432    28.429    HSV_MODE/Hue/ctr/data1[5]
+    SLICE_X7Y113         LUT6 (Prop_lut6_I2_O)        0.306    28.735 r  HSV_MODE/Hue/ctr/R_U_reg[5]_i_1/O
+                         net (fo=1, routed)           0.484    29.218    HSV_TO_RGB/D[5]
+    SLICE_X2Y113         LDCE                                         r  HSV_TO_RGB/R_U_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 reset
-                            (input port)
-  Destination:            Red/ctr/COUNT_reg[2]/CLR
+  Source:                 HSV_MODE/Value/ctr/COUNT_reg[0]/G
+                            (positive level-sensitive latch)
+  Destination:            HSV_TO_RGB/G_U_reg[5]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        5.624ns  (logic 1.631ns (29.002%)  route 3.993ns (70.998%))
-  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Data Path Delay:        29.168ns  (logic 9.934ns (34.058%)  route 19.234ns (65.942%))
+  Logic Levels:           34  (CARRY4=14 LDCE=1 LUT2=4 LUT3=4 LUT4=4 LUT5=3 LUT6=4)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    C12                                               0.000     0.000 r  reset (IN)
-                         net (fo=0)                   0.000     0.000    reset
-    C12                  IBUF (Prop_ibuf_I_O)         1.507     1.507 r  reset_IBUF_inst/O
-                         net (fo=1, routed)           2.663     4.170    Green/ctr/reset_IBUF
-    SLICE_X2Y98          LUT1 (Prop_lut1_I0_O)        0.124     4.294 f  Green/ctr/COUNT[7]_i_3__1/O
-                         net (fo=24, routed)          1.330     5.624    Red/ctr/COUNT_reg[0]_1
-    SLICE_X3Y85          FDCE                                         f  Red/ctr/COUNT_reg[2]/CLR
+    SLICE_X13Y103        LDCE                         0.000     0.000 r  HSV_MODE/Value/ctr/COUNT_reg[0]/G
+    SLICE_X13Y103        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  HSV_MODE/Value/ctr/COUNT_reg[0]/Q
+                         net (fo=21, routed)          1.313     1.872    HSV_MODE/Value/ctr/S[0]
+    SLICE_X9Y103         LUT2 (Prop_lut2_I0_O)        0.124     1.996 r  HSV_MODE/Value/ctr/multOp__23_carry_i_1/O
+                         net (fo=1, routed)           0.000     1.996    HSV_TO_RGB/S[2]
+    SLICE_X9Y103         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     2.397 r  HSV_TO_RGB/multOp__23_carry/CO[3]
+                         net (fo=1, routed)           0.000     2.397    HSV_TO_RGB/multOp__23_carry_n_0
+    SLICE_X9Y104         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     2.710 r  HSV_TO_RGB/multOp__23_carry__0/O[3]
+                         net (fo=3, routed)           1.086     3.796    HSV_MODE/Value/ctr/O[2]
+    SLICE_X14Y104        LUT3 (Prop_lut3_I2_O)        0.306     4.102 f  HSV_MODE/Value/ctr/multOp__55_carry__0_i_10/O
+                         net (fo=2, routed)           0.865     4.967    HSV_MODE/Value/ctr/multOp__55_carry__0_i_10_n_0
+    SLICE_X11Y101        LUT5 (Prop_lut5_I3_O)        0.124     5.091 r  HSV_MODE/Value/ctr/multOp__55_carry__1_i_4/O
+                         net (fo=2, routed)           0.675     5.766    HSV_TO_RGB/R_U0_carry__2_0[0]
+    SLICE_X10Y105        CARRY4 (Prop_carry4_DI[0]_O[3])
+                                                      0.642     6.408 r  HSV_TO_RGB/multOp__55_carry__1/O[3]
+                         net (fo=17, routed)          1.636     8.044    HSV_TO_RGB/multOp[14]
+    SLICE_X12Y108        LUT2 (Prop_lut2_I1_O)        0.307     8.351 r  HSV_TO_RGB/R_U0_carry__2_i_2/O
+                         net (fo=1, routed)           0.000     8.351    HSV_TO_RGB/R_U0_carry__2_i_2_n_0
+    SLICE_X12Y108        CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.352     8.703 r  HSV_TO_RGB/R_U0_carry__2/O[3]
+                         net (fo=3, routed)           0.610     9.313    HSV_TO_RGB/R_U0_carry__2_n_4
+    SLICE_X15Y107        LUT3 (Prop_lut3_I1_O)        0.307     9.620 f  HSV_TO_RGB/R_U0__55_carry__2_i_10/O
+                         net (fo=2, routed)           1.126    10.746    HSV_TO_RGB/R_U0__55_carry__2_i_10_n_0
+    SLICE_X15Y107        LUT5 (Prop_lut5_I1_O)        0.124    10.870 r  HSV_TO_RGB/R_U0__55_carry__2_i_2/O
+                         net (fo=2, routed)           0.573    11.443    HSV_TO_RGB/R_U0__55_carry__2_i_2_n_0
+    SLICE_X13Y107        LUT6 (Prop_lut6_I0_O)        0.124    11.567 r  HSV_TO_RGB/R_U0__55_carry__2_i_6/O
+                         net (fo=1, routed)           0.000    11.567    HSV_TO_RGB/R_U0__55_carry__2_i_6_n_0
+    SLICE_X13Y107        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.965 r  HSV_TO_RGB/R_U0__55_carry__2/CO[3]
+                         net (fo=1, routed)           0.000    11.965    HSV_TO_RGB/R_U0__55_carry__2_n_0
+    SLICE_X13Y108        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    12.187 r  HSV_TO_RGB/R_U0__55_carry__3/O[0]
+                         net (fo=18, routed)          1.186    13.374    HSV_TO_RGB/R_U0__55_carry__3_n_7
+    SLICE_X9Y109         LUT3 (Prop_lut3_I0_O)        0.299    13.673 r  HSV_TO_RGB/R_U0__114_carry__0_i_3/O
+                         net (fo=2, routed)           0.811    14.483    HSV_TO_RGB/R_U0__114_carry__0_i_3_n_0
+    SLICE_X11Y109        LUT4 (Prop_lut4_I3_O)        0.124    14.607 r  HSV_TO_RGB/R_U0__114_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    14.607    HSV_TO_RGB/R_U0__114_carry__0_i_7_n_0
+    SLICE_X11Y109        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    15.157 r  HSV_TO_RGB/R_U0__114_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    15.157    HSV_TO_RGB/R_U0__114_carry__0_n_0
+    SLICE_X11Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    15.491 r  HSV_TO_RGB/R_U0__114_carry__1/O[1]
+                         net (fo=3, routed)           0.823    16.314    HSV_TO_RGB/R_U0__114_carry__1_n_6
+    SLICE_X10Y110        LUT4 (Prop_lut4_I1_O)        0.303    16.617 r  HSV_TO_RGB/R_U0__147_carry__2_i_4/O
+                         net (fo=1, routed)           0.000    16.617    HSV_TO_RGB/R_U0__147_carry__2_i_4_n_0
+    SLICE_X10Y110        CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.458    17.075 f  HSV_TO_RGB/R_U0__147_carry__2/CO[1]
+                         net (fo=11, routed)          1.025    18.100    HSV_TO_RGB/R_U0__147_carry__2_n_2
+    SLICE_X11Y113        LUT3 (Prop_lut3_I0_O)        0.332    18.432 r  HSV_TO_RGB/i___22_carry_i_8/O
+                         net (fo=12, routed)          1.352    19.784    HSV_TO_RGB/i___22_carry_i_8_n_0
+    SLICE_X10Y113        LUT5 (Prop_lut5_I2_O)        0.124    19.908 r  HSV_TO_RGB/L_carry_i_1/O
+                         net (fo=11, routed)          1.019    20.927    HSV_TO_RGB/A[2]
+    SLICE_X8Y111         LUT6 (Prop_lut6_I4_O)        0.124    21.051 r  HSV_TO_RGB/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.642    21.693    HSV_TO_RGB/i___0_carry__0_i_3_n_0
+    SLICE_X9Y112         LUT6 (Prop_lut6_I0_O)        0.124    21.817 r  HSV_TO_RGB/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000    21.817    HSV_TO_RGB/i___0_carry__0_i_7_n_0
+    SLICE_X9Y112         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.424    22.241 r  HSV_TO_RGB/multOp_inferred__0/i___0_carry__0/O[1]
+                         net (fo=2, routed)           0.778    23.018    HSV_TO_RGB/multOp_inferred__0/i___0_carry__0_n_6
+    SLICE_X9Y114         LUT4 (Prop_lut4_I1_O)        0.303    23.321 r  HSV_TO_RGB/i___36_carry_i_6/O
+                         net (fo=1, routed)           0.000    23.321    HSV_TO_RGB/i___36_carry_i_6_n_0
+    SLICE_X9Y114         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    23.548 r  HSV_TO_RGB/multOp_inferred__0/i___36_carry/O[1]
+                         net (fo=7, routed)           1.066    24.614    HSV_TO_RGB/multOp0[5]
+    SLICE_X6Y113         LUT4 (Prop_lut4_I1_O)        0.303    24.917 r  HSV_TO_RGB/L_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    24.917    HSV_TO_RGB/L_carry__0_i_6_n_0
+    SLICE_X6Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    25.147 r  HSV_TO_RGB/L_carry__0/O[1]
+                         net (fo=1, routed)           0.971    26.118    HSV_TO_RGB/L_carry__0_n_6
+    SLICE_X4Y113         LUT2 (Prop_lut2_I0_O)        0.306    26.424 r  HSV_TO_RGB/i__carry__0_i_3/O
+                         net (fo=1, routed)           0.000    26.424    HSV_TO_RGB/i__carry__0_i_3_n_0
+    SLICE_X4Y113         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.227    26.651 r  HSV_TO_RGB/multOp_inferred__1/i__carry__0/O[1]
+                         net (fo=2, routed)           0.812    27.463    HSV_TO_RGB/multOp_inferred__1/i__carry__0_n_6
+    SLICE_X6Y115         LUT2 (Prop_lut2_I0_O)        0.303    27.766 r  HSV_TO_RGB/i__carry__0_i_3__0/O
+                         net (fo=1, routed)           0.000    27.766    HSV_TO_RGB/i__carry__0_i_3__0_n_0
+    SLICE_X6Y115         CARRY4 (Prop_carry4_S[1]_O[1])
+                                                      0.230    27.996 r  HSV_TO_RGB/R_U0_inferred__1/i__carry__0/O[1]
+                         net (fo=3, routed)           0.865    28.862    HSV_MODE/Hue/ctr/data1[5]
+    SLICE_X7Y115         LUT6 (Prop_lut6_I4_O)        0.306    29.168 r  HSV_MODE/Hue/ctr/G_U_reg[5]_i_1/O
+                         net (fo=1, routed)           0.000    29.168    HSV_TO_RGB/ltOp_carry_i_9__0_0[5]
+    SLICE_X7Y115         LDCE                                         r  HSV_TO_RGB/G_U_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -438,175 +1553,181 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 Red/boton1_dtctr/sreg_reg[1]/C
+  Source:                 HSV_MODE/Hue/boton0_debouncer/button_out_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Red/boton1_dtctr/sreg_reg[2]/D
+  Destination:            HSV_MODE/Hue/boton0_synchrnzr/sreg_reg[1]_srl2/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.262ns  (logic 0.128ns (48.889%)  route 0.134ns (51.111%))
+  Data Path Delay:        0.208ns  (logic 0.141ns (67.788%)  route 0.067ns (32.212%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y86          FDRE                         0.000     0.000 r  Red/boton1_dtctr/sreg_reg[1]/C
-    SLICE_X1Y86          FDRE (Prop_fdre_C_Q)         0.128     0.128 r  Red/boton1_dtctr/sreg_reg[1]/Q
-                         net (fo=2, routed)           0.134     0.262    Red/boton1_dtctr/sreg[1]
-    SLICE_X1Y86          FDRE                                         r  Red/boton1_dtctr/sreg_reg[2]/D
+    SLICE_X15Y102        FDRE                         0.000     0.000 r  HSV_MODE/Hue/boton0_debouncer/button_out_reg/C
+    SLICE_X15Y102        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  HSV_MODE/Hue/boton0_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.067     0.208    HSV_MODE/Hue/boton0_synchrnzr/button_out
+    SLICE_X14Y102        SRL16E                                       r  HSV_MODE/Hue/boton0_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Green/boton1_dtctr/sreg_reg[1]/C
+  Source:                 RGB_MODE/Red/boton1_debouncer/button_out_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Green/boton1_dtctr/sreg_reg[2]/D
+  Destination:            RGB_MODE/Red/boton1_synchrnzr/sreg_reg[1]_srl2/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.267ns  (logic 0.148ns (55.377%)  route 0.119ns (44.623%))
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.931%)  route 0.116ns (45.069%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y94          FDRE                         0.000     0.000 r  Green/boton1_dtctr/sreg_reg[1]/C
-    SLICE_X2Y94          FDRE (Prop_fdre_C_Q)         0.148     0.148 r  Green/boton1_dtctr/sreg_reg[1]/Q
-                         net (fo=2, routed)           0.119     0.267    Green/boton1_dtctr/sreg[1]
-    SLICE_X2Y94          FDRE                                         r  Green/boton1_dtctr/sreg_reg[2]/D
+    SLICE_X4Y101         FDRE                         0.000     0.000 r  RGB_MODE/Red/boton1_debouncer/button_out_reg/C
+    SLICE_X4Y101         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  RGB_MODE/Red/boton1_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.116     0.257    RGB_MODE/Red/boton1_synchrnzr/SYNC_OUT_reg_1
+    SLICE_X6Y100         SRL16E                                       r  RGB_MODE/Red/boton1_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Red/boton0_dtctr/sreg_reg[0]/C
+  Source:                 RGB_MODE/Green/boton1_debouncer/button_out_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Red/boton0_dtctr/sreg_reg[1]/D
+  Destination:            RGB_MODE/Green/boton1_synchrnzr/sreg_reg[1]_srl2/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.279ns  (logic 0.148ns (53.103%)  route 0.131ns (46.897%))
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.794%)  route 0.121ns (46.206%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X6Y85          FDRE                         0.000     0.000 r  Red/boton0_dtctr/sreg_reg[0]/C
-    SLICE_X6Y85          FDRE (Prop_fdre_C_Q)         0.148     0.148 r  Red/boton0_dtctr/sreg_reg[0]/Q
-                         net (fo=2, routed)           0.131     0.279    Red/boton0_dtctr/sreg[0]
-    SLICE_X7Y85          FDRE                                         r  Red/boton0_dtctr/sreg_reg[1]/D
+    SLICE_X7Y100         FDRE                         0.000     0.000 r  RGB_MODE/Green/boton1_debouncer/button_out_reg/C
+    SLICE_X7Y100         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  RGB_MODE/Green/boton1_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.121     0.262    RGB_MODE/Green/boton1_synchrnzr/SYNC_OUT_reg_1
+    SLICE_X6Y100         SRL16E                                       r  RGB_MODE/Green/boton1_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Blue/boton1_debouncer/button_out_reg/C
+  Source:                 HSV_MODE/Hue/boton1_debouncer/button_out_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Blue/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
+  Destination:            HSV_MODE/Hue/boton1_synchrnzr/sreg_reg[1]_srl2/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.287ns  (logic 0.164ns (57.121%)  route 0.123ns (42.879%))
+  Data Path Delay:        0.265ns  (logic 0.141ns (53.174%)  route 0.124ns (46.826%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y90          FDRE                         0.000     0.000 r  Blue/boton1_debouncer/button_out_reg/C
-    SLICE_X2Y90          FDRE (Prop_fdre_C_Q)         0.164     0.164 r  Blue/boton1_debouncer/button_out_reg/Q
-                         net (fo=2, routed)           0.123     0.287    Blue/boton1_synchrnzr/sreg_reg[0]
-    SLICE_X2Y91          SRL16E                                       r  Blue/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
+    SLICE_X9Y95          FDRE                         0.000     0.000 r  HSV_MODE/Hue/boton1_debouncer/button_out_reg/C
+    SLICE_X9Y95          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  HSV_MODE/Hue/boton1_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.124     0.265    HSV_MODE/Hue/boton1_synchrnzr/SYNC_OUT_reg_1
+    SLICE_X10Y94         SRL16E                                       r  HSV_MODE/Hue/boton1_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Green/boton1_debouncer/button_out_reg/C
+  Source:                 RGB_MODE/Red/boton0_debouncer/button_prev_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Green/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
+  Destination:            RGB_MODE/Red/boton0_debouncer/button_out_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.317ns  (logic 0.164ns (51.658%)  route 0.153ns (48.342%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.283ns  (logic 0.186ns (65.775%)  route 0.097ns (34.225%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y88          FDRE                         0.000     0.000 r  Green/boton1_debouncer/button_out_reg/C
-    SLICE_X2Y88          FDRE (Prop_fdre_C_Q)         0.164     0.164 r  Green/boton1_debouncer/button_out_reg/Q
-                         net (fo=2, routed)           0.153     0.317    Green/boton1_synchrnzr/sreg_reg[0]
-    SLICE_X2Y86          SRL16E                                       r  Green/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
+    SLICE_X0Y95          FDRE                         0.000     0.000 r  RGB_MODE/Red/boton0_debouncer/button_prev_reg/C
+    SLICE_X0Y95          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  RGB_MODE/Red/boton0_debouncer/button_prev_reg/Q
+                         net (fo=2, routed)           0.097     0.238    RGB_MODE/Red/boton0_debouncer/button_prev
+    SLICE_X1Y95          LUT4 (Prop_lut4_I2_O)        0.045     0.283 r  RGB_MODE/Red/boton0_debouncer/button_out_i_1/O
+                         net (fo=1, routed)           0.000     0.283    RGB_MODE/Red/boton0_debouncer/button_out_i_1_n_0
+    SLICE_X1Y95          FDRE                                         r  RGB_MODE/Red/boton0_debouncer/button_out_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Red/boton1_dtctr/sreg_reg[0]/C
+  Source:                 HSV_MODE/Saturation/boton0_debouncer/button_prev_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Red/boton1_dtctr/sreg_reg[1]/D
+  Destination:            HSV_MODE/Saturation/boton0_debouncer/button_out_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.318ns  (logic 0.148ns (46.553%)  route 0.170ns (53.447%))
-  Logic Levels:           1  (FDRE=1)
+  Data Path Delay:        0.284ns  (logic 0.186ns (65.445%)  route 0.098ns (34.555%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y86          FDRE                         0.000     0.000 r  Red/boton1_dtctr/sreg_reg[0]/C
-    SLICE_X2Y86          FDRE (Prop_fdre_C_Q)         0.148     0.148 r  Red/boton1_dtctr/sreg_reg[0]/Q
-                         net (fo=2, routed)           0.170     0.318    Red/boton1_dtctr/sreg[0]
-    SLICE_X1Y86          FDRE                                         r  Red/boton1_dtctr/sreg_reg[1]/D
+    SLICE_X13Y94         FDRE                         0.000     0.000 r  HSV_MODE/Saturation/boton0_debouncer/button_prev_reg/C
+    SLICE_X13Y94         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  HSV_MODE/Saturation/boton0_debouncer/button_prev_reg/Q
+                         net (fo=2, routed)           0.098     0.239    HSV_MODE/Saturation/boton0_debouncer/button_prev
+    SLICE_X12Y94         LUT4 (Prop_lut4_I1_O)        0.045     0.284 r  HSV_MODE/Saturation/boton0_debouncer/button_out_i_1__7/O
+                         net (fo=1, routed)           0.000     0.284    HSV_MODE/Saturation/boton0_debouncer/button_out_i_1__7_n_0
+    SLICE_X12Y94         FDRE                                         r  HSV_MODE/Saturation/boton0_debouncer/button_out_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Red/pwminstance/counter_PWM_reg[3]/C
+  Source:                 PWM_B_COMPLEMENTARY/counter_PWM_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Red/pwminstance/counter_PWM_reg[5]/D
+  Destination:            PWM_B_COMPLEMENTARY/counter_PWM_reg[5]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.320ns  (logic 0.186ns (58.093%)  route 0.134ns (41.907%))
+  Data Path Delay:        0.289ns  (logic 0.186ns (64.421%)  route 0.103ns (35.579%))
   Logic Levels:           2  (FDRE=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y86          FDRE                         0.000     0.000 r  Red/pwminstance/counter_PWM_reg[3]/C
-    SLICE_X4Y86          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Red/pwminstance/counter_PWM_reg[3]/Q
-                         net (fo=6, routed)           0.134     0.275    Red/pwminstance/Q[3]
-    SLICE_X5Y85          LUT6 (Prop_lut6_I1_O)        0.045     0.320 r  Red/pwminstance/counter_PWM[5]_i_1__1/O
-                         net (fo=1, routed)           0.000     0.320    Red/pwminstance/plusOp__1[5]
-    SLICE_X5Y85          FDRE                                         r  Red/pwminstance/counter_PWM_reg[5]/D
+    SLICE_X5Y116         FDRE                         0.000     0.000 r  PWM_B_COMPLEMENTARY/counter_PWM_reg[0]/C
+    SLICE_X5Y116         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  PWM_B_COMPLEMENTARY/counter_PWM_reg[0]/Q
+                         net (fo=9, routed)           0.103     0.244    PWM_B_COMPLEMENTARY/Q[0]
+    SLICE_X4Y116         LUT6 (Prop_lut6_I2_O)        0.045     0.289 r  PWM_B_COMPLEMENTARY/counter_PWM[5]_i_1__3/O
+                         net (fo=1, routed)           0.000     0.289    PWM_B_COMPLEMENTARY/plusOp__4[5]
+    SLICE_X4Y116         FDRE                                         r  PWM_B_COMPLEMENTARY/counter_PWM_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Blue/boton0_dtctr/sreg_reg[1]/C
+  Source:                 PWM_B/counter_PWM_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Blue/boton0_dtctr/sreg_reg[2]/D
+  Destination:            PWM_B/counter_PWM_reg[5]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.321ns  (logic 0.141ns (43.905%)  route 0.180ns (56.095%))
+  Data Path Delay:        0.301ns  (logic 0.186ns (61.818%)  route 0.115ns (38.182%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y117         FDRE                         0.000     0.000 r  PWM_B/counter_PWM_reg[0]/C
+    SLICE_X1Y117         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  PWM_B/counter_PWM_reg[0]/Q
+                         net (fo=9, routed)           0.115     0.256    PWM_B/Q[0]
+    SLICE_X0Y117         LUT6 (Prop_lut6_I2_O)        0.045     0.301 r  PWM_B/counter_PWM[5]_i_1__0/O
+                         net (fo=1, routed)           0.000     0.301    PWM_B/plusOp__1[5]
+    SLICE_X0Y117         FDRE                                         r  PWM_B/counter_PWM_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 HSV_MODE/Saturation/boton1_debouncer/button_out_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            HSV_MODE/Saturation/boton1_synchrnzr/sreg_reg[1]_srl2/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.306ns  (logic 0.141ns (46.037%)  route 0.165ns (53.963%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X9Y91          FDRE                         0.000     0.000 r  Blue/boton0_dtctr/sreg_reg[1]/C
-    SLICE_X9Y91          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Blue/boton0_dtctr/sreg_reg[1]/Q
-                         net (fo=2, routed)           0.180     0.321    Blue/boton0_dtctr/sreg[1]
-    SLICE_X9Y91          FDRE                                         r  Blue/boton0_dtctr/sreg_reg[2]/D
+    SLICE_X5Y95          FDRE                         0.000     0.000 r  HSV_MODE/Saturation/boton1_debouncer/button_out_reg/C
+    SLICE_X5Y95          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  HSV_MODE/Saturation/boton1_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.165     0.306    HSV_MODE/Saturation/boton1_synchrnzr/SYNC_OUT_reg_1
+    SLICE_X6Y95          SRL16E                                       r  HSV_MODE/Saturation/boton1_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Red/boton0_dtctr/sreg_reg[1]/C
+  Source:                 HSV_MODE/Saturation/boton0_debouncer/button_out_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Red/boton0_dtctr/sreg_reg[2]/D
+  Destination:            HSV_MODE/Saturation/boton0_synchrnzr/sreg_reg[1]_srl2/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.322ns  (logic 0.141ns (43.738%)  route 0.181ns (56.262%))
+  Data Path Delay:        0.309ns  (logic 0.164ns (53.062%)  route 0.145ns (46.938%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y85          FDRE                         0.000     0.000 r  Red/boton0_dtctr/sreg_reg[1]/C
-    SLICE_X7Y85          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Red/boton0_dtctr/sreg_reg[1]/Q
-                         net (fo=2, routed)           0.181     0.322    Red/boton0_dtctr/sreg[1]
-    SLICE_X7Y85          FDRE                                         r  Red/boton0_dtctr/sreg_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Red/boton1_debouncer/button_out_reg/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Red/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.329ns  (logic 0.141ns (42.908%)  route 0.188ns (57.092%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y86          FDRE                         0.000     0.000 r  Red/boton1_debouncer/button_out_reg/C
-    SLICE_X1Y86          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Red/boton1_debouncer/button_out_reg/Q
-                         net (fo=2, routed)           0.188     0.329    Red/boton1_synchrnzr/sreg_reg[0]
-    SLICE_X2Y86          SRL16E                                       r  Red/boton1_synchrnzr/SYNC_OUT_reg_srl3/D
+    SLICE_X12Y94         FDRE                         0.000     0.000 r  HSV_MODE/Saturation/boton0_debouncer/button_out_reg/C
+    SLICE_X12Y94         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  HSV_MODE/Saturation/boton0_debouncer/button_out_reg/Q
+                         net (fo=2, routed)           0.145     0.309    HSV_MODE/Saturation/boton0_synchrnzr/SYNC_OUT_reg_2
+    SLICE_X10Y94         SRL16E                                       r  HSV_MODE/Saturation/boton0_synchrnzr/sreg_reg[1]_srl2/D
   -------------------------------------------------------------------    -------------------
 
 
