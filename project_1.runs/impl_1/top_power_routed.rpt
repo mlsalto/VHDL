@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Thu Dec 22 19:15:43 2022
+| Date             : Sun Jan  8 19:28:48 2023
 | Host             : LAPTOP-B7P6UCK1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 11.368       |
+| Total On-Chip Power (W)  | 11.063       |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 11.148       |
-| Device Static (W)        | 0.221        |
+| Dynamic (W)              | 10.849       |
+| Device Static (W)        | 0.213        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 33.1         |
-| Junction Temperature (C) | 76.9         |
+| Max Ambient (C)          | 34.5         |
+| Junction Temperature (C) | 75.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     3.628 |     1592 |       --- |             --- |
-|   LUT as Logic          |     3.003 |      592 |     63400 |            0.93 |
-|   CARRY4                |     0.424 |      199 |     15850 |            1.26 |
-|   Register              |     0.187 |      581 |    126800 |            0.46 |
+| Slice Logic             |     3.697 |     1578 |       --- |             --- |
+|   LUT as Logic          |     3.080 |      598 |     63400 |            0.94 |
+|   CARRY4                |     0.419 |      199 |     15850 |            1.26 |
+|   Register              |     0.184 |      570 |    126800 |            0.45 |
 |   LUT as Shift Register |     0.006 |       12 |     19000 |            0.06 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes           |     0.001 |        1 |     63400 |           <0.01 |
+|   F7/F8 Muxes           |     0.002 |        2 |     63400 |           <0.01 |
 |   Others                |     0.000 |       80 |       --- |             --- |
-| Signals                 |     3.751 |     1290 |       --- |             --- |
-| I/O                     |     3.769 |       17 |       210 |            8.10 |
-| Static Power            |     0.221 |          |           |                 |
-| Total                   |    11.368 |          |           |                 |
+| Signals                 |     3.391 |     1266 |       --- |             --- |
+| I/O                     |     3.762 |       17 |       210 |            8.10 |
+| Static Power            |     0.213 |          |           |                 |
+| Total                   |    11.063 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     7.532 |       7.419 |      0.114 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.167 |       0.137 |      0.031 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     1.059 |       1.055 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     7.236 |       7.128 |      0.108 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.166 |       0.136 |      0.030 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     1.057 |       1.053 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,59 +140,59 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| top                    |    11.148 |
-|   HSV_MODE             |     1.307 |
-|     Hue                |     0.686 |
-|       boton0_debouncer |     0.067 |
-|       boton0_synchrnzr |     0.008 |
-|       boton1_debouncer |     0.079 |
+| top                    |    10.849 |
+|   HSV_MODE             |     1.168 |
+|     Hue                |     0.592 |
+|       boton0_debouncer |     0.062 |
+|       boton0_synchrnzr |     0.007 |
+|       boton1_debouncer |     0.066 |
 |       boton1_synchrnzr |     0.003 |
-|       ctr              |     0.405 |
-|       pulses           |     0.123 |
-|     Saturation         |     0.299 |
+|       ctr              |     0.344 |
+|       pulses           |     0.110 |
+|     Saturation         |     0.274 |
 |       boton0_debouncer |     0.068 |
+|       boton0_synchrnzr |     0.008 |
+|       boton1_debouncer |     0.066 |
+|       boton1_synchrnzr |     0.003 |
+|       ctr              |     0.018 |
+|       pulses           |     0.111 |
+|     Value              |     0.302 |
+|       boton0_debouncer |     0.064 |
+|       boton0_synchrnzr |     0.005 |
+|       boton1_debouncer |     0.070 |
+|       boton1_synchrnzr |     0.003 |
+|       ctr              |     0.048 |
+|       pulses           |     0.110 |
+|   HSV_TO_RGB           |     3.633 |
+|   PARTY_MODE           |     0.355 |
+|   PWM_B                |     0.175 |
+|   PWM_B_COMPLEMENTARY  |     0.148 |
+|   PWM_G                |     0.124 |
+|   PWM_G_COMPLEMENTARY  |     0.125 |
+|   PWM_R                |     0.135 |
+|   PWM_R_COMPLEMENTARY  |     0.144 |
+|   RGB_MODE             |     0.892 |
+|     Blue               |     0.334 |
+|       boton0_debouncer |     0.076 |
 |       boton0_synchrnzr |     0.006 |
+|       boton1_debouncer |     0.092 |
+|       boton1_synchrnzr |     0.003 |
+|       ctr              |     0.014 |
+|       pulses           |     0.144 |
+|     Green              |     0.267 |
+|       boton0_debouncer |     0.066 |
+|       boton0_synchrnzr |     0.006 |
+|       boton1_debouncer |     0.067 |
+|       boton1_synchrnzr |     0.003 |
+|       ctr              |     0.015 |
+|       pulses           |     0.110 |
+|     Red                |     0.290 |
+|       boton0_debouncer |     0.081 |
+|       boton0_synchrnzr |     0.005 |
 |       boton1_debouncer |     0.076 |
 |       boton1_synchrnzr |     0.003 |
-|       ctr              |     0.020 |
-|       pulses           |     0.127 |
-|     Value              |     0.322 |
-|       boton0_debouncer |     0.093 |
-|       boton0_synchrnzr |     0.004 |
-|       boton1_debouncer |     0.064 |
-|       boton1_synchrnzr |     0.003 |
-|       ctr              |     0.049 |
-|       pulses           |     0.109 |
-|   HSV_TO_RGB           |     3.784 |
-|   PARTY_MODE           |     0.286 |
-|   PWM_B                |     0.165 |
-|   PWM_B_COMPLEMENTARY  |     0.141 |
-|   PWM_G                |     0.142 |
-|   PWM_G_COMPLEMENTARY  |     0.160 |
-|   PWM_R                |     0.134 |
-|   PWM_R_COMPLEMENTARY  |     0.122 |
-|   RGB_MODE             |     0.944 |
-|     Blue               |     0.309 |
-|       boton0_debouncer |     0.080 |
-|       boton0_synchrnzr |     0.006 |
-|       boton1_debouncer |     0.079 |
-|       boton1_synchrnzr |     0.004 |
 |       ctr              |     0.014 |
-|       pulses           |     0.126 |
-|     Green              |     0.328 |
-|       boton0_debouncer |     0.077 |
-|       boton0_synchrnzr |     0.006 |
-|       boton1_debouncer |     0.090 |
-|       boton1_synchrnzr |     0.003 |
-|       ctr              |     0.014 |
-|       pulses           |     0.138 |
-|     Red                |     0.307 |
-|       boton0_debouncer |     0.068 |
-|       boton0_synchrnzr |     0.005 |
-|       boton1_debouncer |     0.087 |
-|       boton1_synchrnzr |     0.003 |
-|       ctr              |     0.014 |
-|       pulses           |     0.130 |
+|       pulses           |     0.112 |
 +------------------------+-----------+
 
 
