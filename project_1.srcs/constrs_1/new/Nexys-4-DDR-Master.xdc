@@ -22,10 +22,10 @@ set_property -dict { PACKAGE_PIN M13   IOSTANDARD LVCMOS33 } [get_ports { switch
 #set_property -dict { PACKAGE_PIN U8    IOSTANDARD LVCMOS18 } [get_ports { switches_mode[0] }]; #IO_25_34 Sch=sw[9]
 #set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { switches_mode[1] }]; #IO_L15P_T2_DQS_RDWR_B_14 Sch=sw[10]
 #set_property -dict { PACKAGE_PIN T13   IOSTANDARD LVCMOS33 } [get_ports { switches_mode[2] }]; #IO_L23P_T3_A03_D19_14 Sch=sw[11]
-set_property -dict {PACKAGE_PIN H6 IOSTANDARD LVCMOS33} [get_ports {switches_mode[3]}]
-set_property -dict {PACKAGE_PIN U12 IOSTANDARD LVCMOS33} [get_ports {switches_mode[0]}]
-set_property -dict {PACKAGE_PIN U11 IOSTANDARD LVCMOS33} [get_ports {switches_mode[1]}]
-set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {switches_mode[2]}]
+set_property -dict {PACKAGE_PIN H6 IOSTANDARD LVCMOS33} [get_ports {switches_mode[3]}] 
+set_property -dict {PACKAGE_PIN U12 IOSTANDARD LVCMOS33} [get_ports {switches_mode[0]}] 
+set_property -dict {PACKAGE_PIN U11 IOSTANDARD LVCMOS33} [get_ports {switches_mode[1]}] 
+set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {switches_mode[2]}] 
 
 
 ## LEDs

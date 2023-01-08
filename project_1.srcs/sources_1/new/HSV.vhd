@@ -38,9 +38,9 @@ entity HSV is
         reset : in std_logic; --Usaremos 2 botones para controlar los 3 colores en un led
         clk : in std_logic;
         enable: in std_logic_vector( 2 downto 0);
-        H : out std_logic_vector( 8 downto 0);
-        S : out std_logic_vector( 8 downto 0);
-        V : out std_logic_vector( 8 downto 0)
+        H : out std_logic_vector( 8 downto 0); -- Valor de Hue
+        S : out std_logic_vector( 8 downto 0); -- Valor de Saturation
+        V : out std_logic_vector( 8 downto 0) -- Valor de Value
    );
 end HSV;
 
@@ -58,6 +58,8 @@ component Color is
    end component;
 
 begin
+
+--Instanciacion de las coordenadas:
 
 Hue: Color port map (reset, clk, button, enable(2),"101101000" , H); -- 101101000 es 360, el valor maximo que puede tomar.
 Saturation : Color port map (reset, clk, button, enable(1),"001100100" , S); -- 001100100 es 100, el valor maximo que puede tomar.

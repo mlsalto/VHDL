@@ -35,7 +35,7 @@ use IEEE.numeric_std.all;
 
 entity Convertidor_HSV_RGB is
  Port ( 
-        H : in std_logic_vector( 8 downto 0);
+        H : in std_logic_vector( 8 downto 0); 
         S : in std_logic_vector( 8 downto 0);
         V : in std_logic_vector( 8 downto 0);
         R : out std_logic_vector( 8 downto 0);
@@ -46,9 +46,13 @@ end Convertidor_HSV_RGB;
 
 architecture Behavioral of Convertidor_HSV_RGB is
 
-signal CapitalM : integer;
+--Valores función de las entradas
+
+signal CapitalM : integer; 
 signal m : integer;
 signal z : integer;
+
+--Señales auxiliares
 
 signal R_U : unsigned(8 downto 0);
 signal G_U : unsigned(8 downto 0);
@@ -59,10 +63,13 @@ begin
 process(H,S,V)
 begin
 
+-- Se hacen enteros para facilitar los calculos
+
 CapitalM <= to_integer(255*unsigned(V)/100);
 m <= to_integer(CapitalM*(1- (unsigned(S)/100)));
 z <= to_integer((CapitalM - m)*unsigned((1- abs(((signed(H)/60) mod 2) - 1))));
 
+--Dependiendo de H, R, G Y B tendrán diferentes funciones
 
         if (H >= 0 and H < 60) then
                 R_U <= to_unsigned(CapitalM, 9);

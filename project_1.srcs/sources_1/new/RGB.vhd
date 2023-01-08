@@ -36,13 +36,13 @@ use IEEE.numeric_std.all;
 entity RGB is
 
    port(
-        button : in std_logic_vector(1 downto 0);
+        button : in std_logic_vector(1 downto 0); -- Los botones que incrementan el color
         reset : in std_logic; --Usaremos 2 botones para controlar los 3 colores en un led
         clk : in std_logic;
-        enable: in std_logic_vector( 2 downto 0);
-        R : out std_logic_vector( 8 downto 0);
-        G : out std_logic_vector( 8 downto 0);
-        B : out std_logic_vector( 8 downto 0)
+        enable: in std_logic_vector( 2 downto 0); --Los enable de cada color
+        R : out std_logic_vector( 8 downto 0); -- Intensidad del rojo
+        G : out std_logic_vector( 8 downto 0); -- Intensidad del verde
+        B : out std_logic_vector( 8 downto 0) --Intensidad del azul
         );
         
 end RGB;
@@ -63,6 +63,8 @@ component Color is
 constant max_rgb : std_logic_vector(8 downto 0) := "011111111"; -- 255
 
 begin
+
+--Instancias de los 3 colores del espacio RGB
 
 Red: Color port map(reset, clk, button, enable(2), max_rgb, R); 
 Blue: Color port map(reset, clk, button, enable(1), max_rgb, B);

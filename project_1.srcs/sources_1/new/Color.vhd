@@ -38,15 +38,17 @@ generic (max_width : natural := 9);
 port(
         reset : in std_logic;
         clk : in std_logic;
-        button : in std_logic_vector(1 downto 0); --2 botones por color, 1 lo sube y 0 lo baja
-        enable: in std_logic;
-        Max_level: in std_logic_vector(max_width - 1 downto 0);
+        button : in std_logic_vector(1 downto 0); --2 botones por color, button[1] lo sube y button[0] lo baja
+        enable: in std_logic; -- Si esta a '1' se podrá modificar el valor del color.
+        Max_level: in std_logic_vector(max_width - 1 downto 0); -- Nivel maximo del contador, varia en funcion del espacio de colores.
         color: out std_logic_vector (max_width - 1 downto 0) --Salida de la intensidad del color 
        
         );
 end Color;
 
 architecture structural of Color is
+
+    --SEÑALES INTERMEDIAS
 
     signal debounced_input: std_logic_vector( 1 downto 0);
     signal SYNC_IN_OUT : std_logic_vector(1 downto 0);
@@ -102,10 +104,9 @@ begin
     boton1_synchrnzr: Synchrnzr port map(clk, debounced_input(1), sync_in_out(1));
     
     --Instancia del generador de pulso
- 
     pulses: Pulse_generator port map(clk, pulse);
   
- --Instancia del contador
+    --Instancia del contador
     ctr: counter port map (reset, pulse, enable, Max_level, sync_in_out(1), sync_in_out(0), color);
 
 end structural;

@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity pulse_generator is
   Port (
             clk :in std_logic;
-            clk_out: buffer std_logic
+            clk_out: buffer std_logic:='0'
    );
 end pulse_generator;
 
@@ -43,12 +43,12 @@ architecture Behavioral of pulse_generator is
 begin
 
 process(clk)
-variable temp:integer range 0 to 2000000:=0; --Para que la frecuencia de la señal sea de 50 Hz
+variable temp:integer range 0 to 2000000:=0; --Para que la frecuencia de la señal sea de 25 Hz
 begin
 if rising_edge(clk) then
     temp:=temp+1;
     if(temp>=2000000)then
-        clk_out <=not clk_out;
+        clk_out <=not clk_out; -- Se cambia el estado de la salida en un semiperiodo
         temp:=0;
     end if;
 end if;
